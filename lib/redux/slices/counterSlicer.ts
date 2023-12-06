@@ -1,5 +1,5 @@
 // Import createSlice from Redux Toolkit for creating a slice of the Redux store
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 // Define the type for the state
 interface CounterState {

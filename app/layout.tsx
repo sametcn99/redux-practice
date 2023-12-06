@@ -24,7 +24,7 @@ export default function RootLayout({
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content="Redux-Toolkit Practicing Examples" />
       </head>
-      <body className="flex min-h-screen flex-col items-center pt-6 text-green-600 antialiased">
+      <body className="flex flex-col items-center text-green-400 antialiased transition-all duration-1000">
         <Providers>{children}</Providers>
       </body>
     </html>

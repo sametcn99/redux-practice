@@ -15,10 +15,16 @@ import { CiStop1 } from "react-icons/ci";
 import Input from "../Input";
 
 function Todo() {
+  // Initialize Redux dispatch hook
   const dispatch = useDispatch();
+
+  // Retrieve todos from Redux state using the useSelector hook
   const todos = useSelector((state: RootState) => state.todo.list);
+
+  // State to manage the value of the new todo input
   const [newTodo, setNewTodo] = useState("");
 
+  // Function to handle adding a new todo
   const handleAddTodo = () => {
     dispatch(
       addTodo({
@@ -27,13 +33,15 @@ function Todo() {
         completed: false,
       }),
     );
-    setNewTodo("");
+    setNewTodo(""); // Clear the input after adding a new todo
   };
 
+  // Function to handle removing a todo
   const handleRemoveTodo = (id: number) => {
     dispatch(removeTodo(id));
   };
 
+  // Function to handle toggling the completion status of a todo
   const handleToggleComplete = (id: number) => {
     dispatch(toggleComplete(id));
   };
