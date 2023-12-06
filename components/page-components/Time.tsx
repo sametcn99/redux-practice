@@ -23,7 +23,7 @@ export default function Time() {
       const intervalId = setInterval(() => {
         const newTime = new Date();
         dispatch(updateTime(newTime.getTime()));
-      }, 100);
+      });
 
       // Clean up the interval when the component unmounts
       return () => clearInterval(intervalId);
