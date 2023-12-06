@@ -11,6 +11,7 @@ import {
 } from "@/lib/redux/slices/counterSlicer";
 import Container from "../Container";
 import { GrPowerReset } from "react-icons/gr";
+import CounterButton from "../CounterButton";
 
 export default function Counter() {
   const count = useSelector((state: RootState) => state.counter.value);
@@ -18,26 +19,29 @@ export default function Counter() {
   return (
     <Container>
       <div className="font-mono text-3xl">
-        Count: <span>{count}</span>
+        <span>Count:</span> <span>{count}</span>
       </div>
       <div className="flex gap-4">
-        <button onClick={() => dispatch(decrement())}>
-          <FaMinus />
-        </button>
-        <button onClick={() => dispatch(increment())}>
-          <FaPlus />
-        </button>
-        <button onClick={() => dispatch(doubled())}>
-          <span className="font-bold">2x</span>
-        </button>
-        <button onClick={() => dispatch(half())}>
-          <span className="font-bold">/ 2</span>
-        </button>
-        <button onClick={() => dispatch(reset())}>
-          <span className="font-bold">
-            <GrPowerReset />
-          </span>
-        </button>
+        <CounterButton
+          onClick={() => dispatch(decrement())}
+          logo={<FaMinus />}
+        />
+        <CounterButton
+          onClick={() => dispatch(increment())}
+          logo={<FaPlus />}
+        />
+        <CounterButton
+          onClick={() => dispatch(doubled())}
+          logo={<span className="font-bold">2x</span>}
+        />
+        <CounterButton
+          onClick={() => dispatch(half())}
+          logo={<span className="font-bold">/2</span>}
+        />
+        <CounterButton
+          onClick={() => dispatch(reset())}
+          logo={<GrPowerReset />}
+        />
       </div>
     </Container>
   );
