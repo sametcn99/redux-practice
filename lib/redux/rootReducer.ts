@@ -7,6 +7,7 @@ import userReducer from "./slices/userSlicer";
 import todoReducer from "./slices/todoSlicer";
 import searchReducer from "./slices/searchSlicer";
 import timeReducer from "./slices/timerSlicer";
+import sortReducer from "./slices/sortedSlicer";
 
 // Combine the individual reducers into a root reducer using combineReducers
 // The keys in the resulting state object will correspond to the names given to the individual reducers
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   todo: todoReducer, // Reducer for managing todo's
   search: searchReducer, // Reducer for managing search state
   time: timeReducer,
+  sort: sortReducer,
 });
 
 // Export the combined root reducer as the default export of this module

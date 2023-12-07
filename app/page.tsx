@@ -1,6 +1,7 @@
 import Counter from "@/components/page-components/Counter";
 import Header from "@/components/page-components/Header";
 import Search from "@/components/page-components/Search";
+import Sort from "@/components/page-components/Sort";
 import Todo from "@/components/page-components/Todo";
 import UserProfile from "@/components/page-components/User";
 import dynamic from "next/dynamic";
@@ -19,6 +20,7 @@ export default function Home() {
       <UserProfile />
       <Todo />
       <Search />
+      <Sort />
     </main>
   );
 }
