@@ -10,7 +10,7 @@ export default function Header() {
       </h1>
       <Link
         className="rounded-lg bg-green-900 p-2 transition-all duration-1000 hover:bg-green-950"
-        href={`https://github.com/sametcn99/redux-practice`}
+        href={`https://sametcc.me/redux-practice`}
         target="_blank"
       >
         Source Code
