@@ -1,9 +1,9 @@
 "use client";
-import { useEffect } from "react";
-import Container from "../Container";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@/lib/redux/store";
 import { updateTime } from "@/lib/redux/slices/timerSlicer";
+import { RootState } from "@/lib/redux/store";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import Container from "../Container";
 
 export default function Time() {
   // Initialize Redux dispatch hook

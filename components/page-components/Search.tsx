@@ -1,11 +1,11 @@
 "use client";
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
 import {
-  setSearchTerm,
   selectFilteredData,
+  setSearchTerm,
 } from "@/lib/redux/slices/searchSlicer";
 import { RootState } from "@/lib/redux/store";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Container from "../Container";
 import Input from "../Input";
 
@@ -30,7 +30,10 @@ export default function Search() {
       />
       <ul className="flex h-[20rem] w-full flex-col gap-2 overflow-y-auto">
         {filteredData.map((item: any) => (
-          <li key={item.id} className="flex flex-col rounded-lg bg-black p-2">
+          <li
+            key={item.id}
+            className="flex flex-col rounded-lg bg-black/20 p-2"
+          >
             <span> {item.name}</span>
             <span> {item.email}</span>
           </li>

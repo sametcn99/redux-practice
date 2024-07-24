@@ -1,17 +1,16 @@
 "use client";
 // src/App.tsx
-import React, { useState } from "react";
+import { RootState } from "@/lib/redux/store";
+import { useState } from "react";
+import { CiSquareCheck, CiStop1 } from "react-icons/ci";
+import { FaRegTrashAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addTodo,
   removeTodo,
   toggleComplete,
 } from "../../lib/redux/slices/todoSlicer";
-import { RootState } from "@/lib/redux/store";
 import Container from "../Container";
-import { FaRegTrashAlt } from "react-icons/fa";
-import { CiSquareCheck } from "react-icons/ci";
-import { CiStop1 } from "react-icons/ci";
 import Input from "../Input";
 
 function Todo() {
@@ -88,9 +87,7 @@ function Todo() {
         type="text"
         name="todo"
       />
-      <button onClick={handleAddTodo} className="w-full bg-black p-2">
-        Add Todo
-      </button>
+      <button onClick={handleAddTodo}>Add Todo</button>
     </Container>
   );
 }

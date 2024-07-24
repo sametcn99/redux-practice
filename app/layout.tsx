@@ -1,6 +1,6 @@
+import { Providers } from "@/lib/providers";
 import type { Metadata } from "next";
 import "./globals.css";
-import { Providers } from "@/lib/providers";
 
 export const metadata: Metadata = {
   title: "Redux-Toolkit Practicing Examples",
@@ -25,7 +25,7 @@ export default function RootLayout({
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content="Redux-Toolkit Practicing Examples" />
       </head>
-      <body className="flex flex-col items-center text-green-400 antialiased transition-all duration-1000">
+      <body className="flex flex-col items-center text-white antialiased transition-all duration-1000">
         <Providers>{children}</Providers>
       </body>
     </html>

@@ -1,8 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import { RootState } from "@/lib/redux/store";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../../lib/redux/slices/userSlicer";
-import { RootState } from "@/lib/redux/store";
 import Container from "../Container";
 import Input from "../Input";
 
@@ -16,6 +16,13 @@ const UserProfile = () => {
   // Handler for updating user information
   const handleUpdateUser = (e: any) => {
     e.preventDefault();
+
+    // validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert("Invalid email format");
+      return;
+    }
 
     // Dispatching setUser action to update the state with new user data
     dispatch(setUser({ ...user, ...formData }));
@@ -52,9 +59,7 @@ const UserProfile = () => {
           name="email"
         />
         {/* Button to trigger the update */}
-        <button type="submit" className="bg-black p-2">
-          Update User
-        </button>
+        <button type="submit">Update User</button>
       </form>
     </Container>
   );

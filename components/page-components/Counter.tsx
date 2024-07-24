@@ -1,7 +1,4 @@
 "use client";
-import { RootState } from "@/lib/redux/store";
-import { useDispatch, useSelector } from "react-redux";
-import { FaPlus, FaMinus } from "react-icons/fa";
 import {
   decrement,
   doubled,
@@ -9,8 +6,11 @@ import {
   increment,
   reset,
 } from "@/lib/redux/slices/counterSlicer";
-import Container from "../Container";
+import { RootState } from "@/lib/redux/store";
+import { FaMinus, FaPlus } from "react-icons/fa";
 import { GrPowerReset } from "react-icons/gr";
+import { useDispatch, useSelector } from "react-redux";
+import Container from "../Container";
 import CounterButton from "../CounterButton";
 
 export default function Counter() {
