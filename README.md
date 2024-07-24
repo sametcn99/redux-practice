@@ -23,6 +23,7 @@ The project utilizes the fundamental principles of Redux, including store, actio
   - `searchSlice`: Holds state for the search feature.
   - `timeSlice`: Keeps track of time information.
   - `sortedSlice`: Used for sorting data.
+  - `apiSlice`: Used for fetching data.
 
 ## Learned Concepts
 
@@ -33,6 +34,7 @@ The project utilizes the fundamental principles of Redux, including store, actio
 - Data access using selectors
 - Memoization with Reselect
 - Utilization of Redux DevTools
+- Async thunk configuration
 
 ## Results
 

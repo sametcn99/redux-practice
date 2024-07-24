@@ -5,6 +5,7 @@ import todoReducer from "./slices/todoSlicer";
 import searchReducer from "./slices/searchSlicer";
 import timeReducer from "./slices/timerSlicer";
 import sortReducer from "./slices/sortedSlicer";
+import apiSlicer from "./slices/apiSlicer";
 
 /**
  * Root reducer function that combines all the individual reducers.
@@ -35,6 +36,11 @@ const rootReducer = combineReducers({
    * The sort reducer function.
    */
   sort: sortReducer,
+
+  /**
+   * The API reducer function.
+   */
+  api: apiSlicer,
 });
 
 /**

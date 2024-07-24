@@ -1,3 +1,4 @@
+import Api from "@/components/page-components/Api";
 import Counter from "@/components/page-components/Counter";
 import Header from "@/components/page-components/Header";
 import Search from "@/components/page-components/Search";
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <main className="my-10 flex select-none flex-col gap-6 p-2 transition-all duration-1000 sm:w-[20rem] md:w-[30rem] lg:w-[40rem]">
       <Header />
+      <Api />
       <Time />
       <Counter />
       <UserProfile />

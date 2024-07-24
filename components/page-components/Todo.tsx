@@ -47,7 +47,7 @@ function Todo() {
 
   return (
     <Container>
-      <h1>To-Do List</h1>
+      <h2>To-Do List</h2>
       <ul className="flex w-full flex-col justify-between gap-4">
         {todos.map((todo: any) => (
           <li

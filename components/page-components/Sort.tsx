@@ -7,7 +7,7 @@ const Sort = () => {
   const data = useSelector(selectSortedData);
   return (
     <Container>
-      <h1>Sorted User Data</h1>
+      <h2>Sorted User Data</h2>
       <ul className="flex h-[20rem] w-full flex-col gap-2 overflow-y-auto">
         {data.map((item: any) => (
           <li
@@ -20,7 +20,6 @@ const Sort = () => {
         ))}
         {data.length === 0 && <li className="text-center">Not Found</li>}
       </ul>
-      <ul></ul>
     </Container>
   );
 };

@@ -29,7 +29,6 @@ const initialState: SearchState = {
   data,
 };
 
-
 /**
  * Redux slice for managing search state.
  */
@@ -80,17 +79,16 @@ export default searchSlice.reducer;
 
 /**
  * Selects the search term from the state.
- * 
+ *
  * @param state - The Redux state object.
  * @returns The search term from the state.
  */
 export const selectSearchTerm = (state: { search: SearchState }) =>
   state.search.searchTerm;
 
-
 /**
  * Selects the data from the search state.
- * 
+ *
  * @param state - The Redux state object.
  * @returns The selected data from the search state.
  */
