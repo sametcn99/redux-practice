@@ -23,7 +23,7 @@ const initialState: ApiState = {
 // Define an asynchronous thunk action
 export const fetchApiData = createAsyncThunk("api/fetchApiData", async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/data");
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/data`);
     const data: UserData[] = await response.json();
     return data;
   } catch (error) {
